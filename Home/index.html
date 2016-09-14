@@ -2,7 +2,6 @@
 <html lang="en" id="Loading">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,39 +14,62 @@
             background:  url('../img/home_starwars.jpg') fixed no-repeat;
             display: none;
         }
-        </style>
-    <style>
+        .loading {
+            position: relative;  z-index:20;width: 100%; height: 100%; overflow:visible;background: url('../img/squares.gif') no-repeat center center black;
+        }
+
         .countdown {
             text-align: center;
             padding-top: 3em;
         }
-
-
-
         @media screen and (min-width: 650px) {
-            #clock {
-                font-size: 2.5vw;
+
+            .block.type-9 {
+                background: #232c3b;
+                padding: 0px;
+                height: 122px;
+            }
+
+            .block.type-9 .entry {
+                padding-top: 45px;
+            }
+
+            .block.type-9 .title {
+                display: inline-block;
+                font-size: 28px;
+                line-height: 0px;
+                color: #F9F9F9;
+                font-family: 'black', sans-serif, Arial;
+                margin-right: 15px;
+            }
+
+            .block.type-9 .text {
+                font-size: 20px;
+                line-height: 24px;
+                color: #fff;
+                display: inline-block;
+            }
+
+            .block.type-9 .text span {
+                color: #80cbc4;
+            }
+
+            .block.type-9 .text b {
+                font-size: 24px;
+            }
+
+            .block.type-9 .text small {
+                font-size: 14px;
+            }
+
+            .block.type-9 .text .button {
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                top: -2px;
+                margin: 0 0 0 10px;
             }
         }
-
-        .countdown-block {
-            display: inline-block;
-            text-align: center;
-            padding: .5em;
-            margin: .2em;
-            background-color: rgba(0,0,0,.5);
-            width: 100%;
-            max-width: 3em;
-        }
-        .block.type-9{background: #232c3b; padding: 0px; height: 122px;}
-        .block.type-9 .entry{padding-top: 45px;}
-        .block.type-9 .title{ display: inline-block; font-size: 28px; line-height: 0px; color: #F9F9F9; font-family: 'black', sans-serif, Arial; margin-right: 15px;}
-        .block.type-9 .text{font-size: 20px; line-height: 24px; color: #fff; display: inline-block;}
-        .block.type-9 .text span{color: #80cbc4;}
-        .block.type-9 .text b{font-size: 24px;}
-        .block.type-9 .text small{font-size: 14px;}
-        .block.type-9 .text .button{display: inline-block; vertical-align: middle; position: relative; top: -2px; margin: 0 0 0 10px;}
-
         #countdown {
             position: absolute;
             float: none;
@@ -96,20 +118,22 @@
                 font-size: 10px;
             }
 
-            #countdown div > span{
+            #countdown div > span {
                 padding: 10px;
             }
+
             #countdown > div {
                 padding: 5px;
             }
+
             #countdown {
-                position:relative;
+                position: relative;
                 font-size: 10px;
                 margin-left: auto;
                 margin-right: auto;
             }
-        }
 
+        }
     </style>
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -134,6 +158,7 @@
     <![endif]-->
 
 </head>
+<div class="loading"></div>
 
 <body id="page-top">
 
@@ -170,7 +195,7 @@
     </nav>
 
     <header>
-        <div class="header-content" style=" z-index: -20;">
+        <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading">MATRIX 2016-17</h1>
                 <hr>
@@ -213,7 +238,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">We've got what you need!</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+                    <p class="text-faded">We Are The Technoholics!</p>
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
                 </div>
             </div>
@@ -224,7 +249,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading">Matrix At Glance!</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -368,16 +393,23 @@
             </div>
         </div>
     </aside>
-    <a href class="page-scroll" style="background-color: #232c3b">
-        <span class="glyphicons glyphicons-chevron-up"></span></a>
-    <footer class="footer text-center" style="background-color: #232c3b" ><p class="copyright text-muted">
-        Copyright &copy; 2016
-        <br>
-        <a href="http://spit.ac.in">Sardar Patel Institute Of Technology</a>
+    <footer class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <p class="text-muted ">
+                Copyright &copy; 2016
+                <br>
+                <a href="http://spit.ac.in" >Sardar Patel Institute Of Technology</a>
+                <br>
+                </p>
+            </div>
+        </div>
+    </footer>
 
-    </p></footer>
 
 
+
+</div>
 </body>
 
 
