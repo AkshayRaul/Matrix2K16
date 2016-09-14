@@ -4,7 +4,7 @@
 $(document).ready(function ($) {
     $(window).load(function () {
         setTimeout(function(){
-            $('#Loading').fadeOut('slow', function () {
+            $('.loading').fadeOut('slow', function () {
             });
         },1000);
         $('body').css('opacity',1);
