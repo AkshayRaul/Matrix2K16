@@ -7,7 +7,7 @@ $(document).ready(function ($) {
             $('.loading').fadeOut('slow', function () {
             });
         },1000);
-        $('body').css('opacity',1);
+
 
     });
 });
