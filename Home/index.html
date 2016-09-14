@@ -12,7 +12,7 @@
     <title>Creative - Start Bootstrap Theme</title>
     <style>
         body{
-            background:  url('../img/home_starwars.jpg');
+            background:  url('../img/home_starwars.jpg') fixed;
 
         }
         </style>
@@ -170,7 +170,7 @@
     </nav>
 
     <header>
-        <div class="header-content">
+        <div class="header-content" style="position: fixed; z-index: -20;">
             <div class="header-content-inner">
                 <h1 id="homeHeading">MATRIX 2016-17</h1>
                 <hr>
@@ -369,12 +369,12 @@
         </div>
     </aside>
 
-    <section id="">
+    <section id="contact" style="background-color: #232c3b;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="panel-primary">
+                    <h2 class="section-heading light">Let's Get In Touch!</h2>
+                    <hr class="panel-body light">
                     <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
@@ -388,15 +388,8 @@
             </div>
         </div>
     </section>
-    <a href class="page-scroll">
-        <span class="glyphicons glyphicons-chevron-up"></span></a>
-    <footer class="footer text-center"><p class="copyright text-muted">
-        Copyright &copy; 2016
-        <br>
-        <a href="http://spit.ac.in">Sardar Patel Institute Of Technology</a>
 
-    </p></footer>
-    <br>
+
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
 
