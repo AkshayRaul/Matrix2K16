@@ -3,12 +3,12 @@
  */
 $(document).ready(function ($) {
     $(window).load(function () {
-        $('body').show();
+
         setTimeout(function(){
             $('.loading').fadeOut('slow', function () {
             });
         },1000);
-
+        $('body').show();
 
     });
 });
