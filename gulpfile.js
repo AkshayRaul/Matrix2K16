@@ -10,7 +10,7 @@ var pkg = require('./package.json');
 // Set the banner content
 var banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+    ' * Copyright 2013-' + (new Date()).getTime(), ' <%= pkg.author %>\n',
     ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
     ' */\n',
     ''
@@ -31,7 +31,7 @@ gulp.task('less', function() {
 gulp.task('minify-css', ['less'], function() {
     return gulp.src('css/creative.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(rename({ suffix: '.minnew' }))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
