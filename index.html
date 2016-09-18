@@ -20,12 +20,45 @@
     <link rel="stylesheet" href="css/countdown-css.css">
     <style>
         #planet1{
-            position: absolute;
+            position: relative;
             width: 40%;
             top:50%;
-            bottom: 0%;
-            left: 0%;
+            bottom: 0cm;
+            left: 0cm;
 
+        }
+        @media only screen and (max-width: 650px) {
+            #planet1{
+                position: absolute;
+                width: 40%;
+                top:80%;
+                bottom: 0cm;
+                z-index: -20;
+
+
+            }
+            .smalltext {
+                padding-top: 2px;
+                font-size: 10px;
+            }
+            #countdown div > span {
+                padding: 10px;
+                background: rgba(0,0,0,.5);
+            }
+            #countdown > div {
+                padding: 5px;
+            }
+            #countdown {
+                position: absolute;
+                float: none;
+                top:10%;
+                font-size: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: sans-serif;
+                color: #fffef6;
+                display: inline-block;
+            }
         }
         #comet{
             position: absolute;
