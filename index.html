@@ -19,9 +19,30 @@
 
     <link rel="stylesheet" href="css/countdown-css.css">
     <style>
+
+
         body{
-            background:  url('img/home_starwars.jpg') ;
-            display: none;
+            background:  url('img/back_starwars.jpg');
+            display: flex;
+
+
+            }
+        @keyframes roll {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
         }
         .loading {
             position: relative;  z-index:20;width: 100%; height: 100%; overflow:visible;background: url('img/squares.gif') no-repeat center center black;
@@ -65,7 +86,9 @@
             <div class="smalltext">Seconds</div>
         </div>
         <br>
-        <a href="Home/index.html" class="btn btn-xl btn-primary">Enter Matrix</button></a>
+        <div>
+        <a href="Home/index.html" class=btn-primary><img src="img/ufo.png"></a>
+            </div>
 
     </div>
 
