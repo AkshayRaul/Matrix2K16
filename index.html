@@ -19,6 +19,10 @@
 
     <link rel="stylesheet" href="css/countdown-css.css">
     <style>
+    @font-face {
+   font-family: starwars;
+   src: url(STARWARS.woff);
+}
         #planet1{
             position: absolute;
             width: 40%;
@@ -69,6 +73,7 @@
         body{
             background:  url('img/back_starwars.jpg');
             display: none;
+            font-family: starwars;
 
 
             }
@@ -104,7 +109,7 @@
     <div class="starwars-demo">
         <img src="img/matriximg.png" alt="Star Wars Font" class="star">
 
-        <h1 class="byline" id="byline">2016-17</h1>
+        <h1 class="byline" id="byline" style="font-family:starwars;">2016-17</h1>
 
         <br><br><br>
 
@@ -113,21 +118,21 @@
 
 </section>
 <section class="section">
-    <div id="countdown" >
+    <div id="countdown" style="font-family:starwars;">
         <div>
-            <span class="days"></span>
+            <span class="days" style="font-size:25px;"></span>
             <div class="smalltext">Days</div>
         </div>
         <div>
-            <span class="hours"></span>
+            <span class="hours" style="font-size:25px;"></span>
             <div class="smalltext">Hours</div>
         </div>
         <div>
-            <span class="minutes"></span>
+            <span class="minutes" style="font-size:25px;"></span>
             <div class="smalltext">Minutes</div>
         </div>
         <div>
-            <span class="seconds"></span>
+            <span class="seconds" style="font-size:25px;"></span>
             <div class="smalltext">Seconds</div>
         </div>
         <br>
