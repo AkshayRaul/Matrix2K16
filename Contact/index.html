@@ -83,10 +83,16 @@
 
     <title>Creative - Start Bootstrap Theme</title>
     <style>
+     @font-face {
+   font-family: starwars;
+   src: url(STARWARS.woff);
+}
         body{
             background:  url('../img/home_starwars.jpg') fixed no-repeat;
             display: none;
-        }
+            font-family: starwars;
+
+             }
         .loading {
             position: relative;  z-index:20;width: 100%; height: 100%; overflow:visible;background: url('../img/squares.gif') no-repeat center center black;
         }
@@ -212,6 +218,38 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            .social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3b5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
 
         }
     </style>
@@ -242,10 +280,10 @@
 
 <body id="page-top">
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="font-family:starwars;">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+        <div class="navbar-header" style="font-family:starwars;">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
@@ -277,13 +315,13 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1 id="homeHeading">Contact Us!</h1>
+            <h1 id="homeHeading" style="font-family:starwars;">Contact Us!</h1>
             <hr class="light">
             <p></p>
         </div>
     </div>
 </header>
-<section class="bg-primary" id="about">
+<section class="bg-primary" id="about" style="font-family:starwars;">
     <div class="container">
         <div class="row">
 
@@ -318,16 +356,16 @@
     </div>
 </section>
 
-<section class="no-padding" id="portfolio">
+<section class="no-padding" id="portfolio" >
     <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
+        <div class="row no-gutter popup-gallery" >
             <div class="col-lg-4 col-sm-6">
                 <a href="../img/core_heads/admin/" class="portfolio-box" >
                     <img src="../img/events_img/admin.png" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
+                        <div class="portfolio-box-caption-content" >
 
-                            <div class="project-name">
+                            <div class="project-name" style="font-family:starwars;">
                                 Admin
                             </div>
                         </div>
@@ -339,7 +377,7 @@
                     <img src="../img/events_img/marketing.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
-                            <div class="project-name">
+                            <div class="project-name"  style="font-family:starwars;">
                                 Marketing
                             </div>
                         </div>
@@ -351,7 +389,7 @@
                     <img src="../img/events_img/exec.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
-                            <div class="project-name">
+                            <div class="project-name"  style="font-family:starwars;">
                                 Executive
                             </div>
                         </div>
@@ -363,7 +401,7 @@
                     <img src="../img/events_img/pr.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
-                            <div class="project-name">
+                            <div class="project-name" style="font-family:starwars;">
                                 Public Relations
                             </div>
                         </div>
@@ -374,8 +412,8 @@
                 <a href="../img/core_heads/security/Screenshot_2016-09-13-19-36-36_1.jpg" class="portfolio-box">
                     <img src="../img/events_img/security.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
+                        <div class="portfolio-box-caption-content" >
+                            <div class="project-name" style="font-family:starwars;">
                                 Security
                             </div>
                         </div>
@@ -386,8 +424,8 @@
                 <a href="../img/core_heads/decor/image.jpg" class="portfolio-box">
                     <img src="../img/events_img/decor.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-name">
+                        <div class="portfolio-box-caption-content" >
+                            <div class="project-name" style="font-family:starwars;">
                                 Decor
                             </div>
                         </div>
@@ -400,11 +438,16 @@
 
 <footer class="bg-primary">
     <div class="container text-center" >
+                <div class="text-center center-block">
+                    <br>
+                <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social" ></i></a>
+</div>
         <div class="call-to-action">
-            <p class="text-muted ">
+            <p class="text-muted "  style="font-family:starwars;">
                 Copyright &copy; 2016
                 <br>
-                <a href="http://spit.ac.in" style="color:white">Sardar Patel Institute Of Technology</a>
+                <a href="http://spit.ac.in" style="color:white" style="font-family:starwars;">Sardar Patel Institute Of Technology</a>
                 <br>
             </p>
         </div>
