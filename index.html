@@ -1,115 +1,46 @@
-<!DOCTYPE html>
-<html lang="en" id="Loading">
-
+<html >
 <head>
-    <meta charset="utf-8">
+    <title>Matrix-The Fest 2016-17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link  rel="icon" href="Matrix.png">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <title>Home-Matrix 2K16</title>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/WelcomeStyle.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/creative.css">
+
+
+    <link rel="stylesheet" href="css/countdown-css.css">
     <style>
     @font-face {
    font-family: starwars;
    src: url(STARWARS.woff);
 }
-        body{
-            background:  url('../img/back_starwars.jpg') fixed ;
-            display: none;
-            font-family: starwars;
-        }
-        .loading {
-            position: relative;  z-index:20;width: 100%; height: 100%; overflow:visible;background: url('../img/squares.gif') no-repeat center center black;
-        }
-        .countdown {
-            text-align: center;
-            padding-top: 3em;
-        }
-        @media screen and (min-width: 650px) {
-            .block.type-9 {
-                background: #232c3b;
-                padding: 0px;
-                height: 50px;
-            }
-            .block.type-9 .entry {
-                padding-top: 45px;
-            }
-            .block.type-9 .title {
-                display: inline-block;
-                font-size: 28px;
-                line-height: 0px;
-                color: #F9F9F9;
-                font-family: 'black', sans-serif, Arial;
-                margin-right: 15px;
-            }
-            .block.type-9 .text {
-                font-size: 20px;
-                line-height: 24px;
-                color: #fff;
-                display: inline-block;
-            }
-            .block.type-9 .text span {
-                color: #80cbc4;
-            }
-            .block.type-9 .text b {
-                font-size: 24px;
-            }
-            .block.type-9 .text small {
-                font-size: 14px;
-            }
-            .block.type-9 .text .button {
-                display: inline-block;
-                vertical-align: middle;
-                position: relative;
-                top: -2px;
-                margin: 0 0 0 10px;
-            }
-        }
-        @media only screen and (max-width: 992px) {
-            .block.type-9 {
-                background: #232c3b;
-                padding: 0px;
-                color: white;
-            }
-        }
-        #countdown {
+        #planet1{
             position: absolute;
-            float: none;
-            width: 100%;
-            /*  margin-top: 40%;
-              margin-left: 25%;
-              */
-            margin-top:60%;
-            bottom:5%;
-            margin-left: auto;
-            margin-right:auto;
-            padding: 10px;
-            margin-left: auto;
-            font-family: sans-serif;
-            color: #fffef6;
-            display: inline-block;
-            font-weight: 100;
-            text-align: center;
-            font-size: 20px;
-        }
-        #countdown > div{
-            padding: 10px;
-            border-radius: 3px;
-            display: inline-block;
-        }
-        #countdown div > span{
-            padding: 15px;
-            border-radius: 3px;
-            background: rgba(0,0,0,.5);
-            display: inline-block;
-        }
-        .smalltext{
-            padding-top: 5px;
-            font-size: 16px;
-        }
-        @media only screen and (max-width: 992px) {
+            width: 40%;
+            top:30%;
+            bottom: 0cm;
+            left: 0cm;
 
+        }
+        @media only screen and (max-width: 650px) {
+            #planet1{
+                position: absolute;
+                width: 40%;
+                top:80%;
+                bottom: 0%;
+                z-index: -20;
+
+
+            }
             .smalltext {
                 padding-top: 2px;
                 font-size: 10px;
@@ -124,7 +55,7 @@
             #countdown {
                 position: absolute;
                 float: none;
-
+                top:10%;
                 font-size: 10px;
                 margin-left: auto;
                 margin-right: auto;
@@ -132,447 +63,93 @@
                 color: #fffef6;
                 display: inline-block;
             }
-            .social:hover {
-     -webkit-transform: scale(1.1);
-     -moz-transform: scale(1.1);
-     -o-transform: scale(1.1);
- }
- .social {
-     -webkit-transform: scale(0.8);
-     /* Browser Variations: */
-     
-     -moz-transform: scale(0.8);
-     -o-transform: scale(0.8);
-     -webkit-transition-duration: 0.5s;
-     -moz-transition-duration: 0.5s;
-     -o-transition-duration: 0.5s;
- }
-
-/*
-    Multicoloured Hover Variations
-*/
- 
- #social-fb:hover {
-     color: #3B5998;
- }
- #social-tw:hover {
-     color: #4099FF;
- }
- #social-gp:hover {
-     color: #d34836;
- }
- #social-em:hover {
-     color: #f39c12;
- }
         }
-    </style>
-    <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/countdown-css.css">
-    <link href="../css/WelcomeStyle.css">
-    <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="../css/creative.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-<div class="loading"></div>
-
-<body id="page-top">
-
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="font-family:starwars;">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header" style="font-family:starwars;">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="../index.html" style="font-family:starwars;">Matrix The Fest 16-17</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">Events</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#aboutus">About Us</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#sponsors">Sponsors</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="../Contact/index.html">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-
-<header>
-    <div class="header-content" >
-        <div class="header-content-inner">
-            <h1 id="homeHeading" style="font-family:starwars;">MATRIX 2016-17</h1>
-            <hr>
-            <p></p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll" style="font-family:starwars;">Find Out More</a>
-        </div>
-    </div>
-    <style>
-
-        .view {
+        #comet{
             position: absolute;
-            top: 45%;
-            left: 0;
-            right: 60%;
-            bottom: 0;
-            -webkit-perspective: 400;
-            perspective: 400;
-            z-index:-20;
+            top:0%;
+            width: 20%;
+            transform: scale(0.8,0.8) rotate(35deg);
         }
+        body{
+            background:  url('img/back_starwars.jpg');
+            display: none;
+            font-family: starwars;
 
-        .plane {
-            width: 120px;
-            height: 120px;
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-        }
-        .plane.main {
-            position: relative;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            -webkit-transform: rotateX(60deg) rotateZ(-30deg);
-            transform: rotateX(60deg) rotateZ(-30deg);
-            -webkit-animation: rotate 20s infinite linear;
-            animation: rotate 20s infinite linear;
-        }
-        .plane.main .circle {
-            width: 120px;
-            height: 120px;
-            position: absolute;
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-            border-radius: 100%;
-            box-sizing: border-box;
-            box-shadow: 0 0 60px crimson, inset 0 0 60px crimson;
-        }
-        .plane.main .circle::before, .plane.main .circle::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            width: 10%;
-            height: 10%;
-            border-radius: 100%;
-            background: crimson;
-            box-sizing: border-box;
-            box-shadow: 0 0 60px 2px crimson;
 
-        }
-        .plane.main .circle::before {
-            -webkit-transform: translateZ(-90px);
-            transform: translateZ(-90px);
-        }
-        .plane.main .circle::after {
-            -webkit-transform: translateZ(90px);
-            transform: translateZ(90px);
-        }
-        .plane.main .circle:nth-child(1) {
-            -webkit-transform: rotateZ(72deg) rotateX(63.435deg);
-            transform: rotateZ(72deg) rotateX(63.435deg);
-        }
-        .plane.main .circle:nth-child(2) {
-            -webkit-transform: rotateZ(144deg) rotateX(63.435deg);
-            transform: rotateZ(144deg) rotateX(63.435deg);
-        }
-        .plane.main .circle:nth-child(3) {
-            -webkit-transform: rotateZ(216deg) rotateX(63.435deg);
-            transform: rotateZ(216deg) rotateX(63.435deg);
-        }
-        .plane.main .circle:nth-child(4) {
-            -webkit-transform: rotateZ(288deg) rotateX(63.435deg);
-            transform: rotateZ(288deg) rotateX(63.435deg);
-        }
-        .plane.main .circle:nth-child(5) {
-            -webkit-transform: rotateZ(360deg) rotateX(63.435deg);
-            transform: rotateZ(360deg) rotateX(63.435deg);
+            }
+        @keyframes roll {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(360deg);
+            }
         }
 
         @-webkit-keyframes rotate {
-            0% {
-                -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            from {
+                -webkit-transform: rotate(0deg);
             }
-            100% {
-                -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            to {
+                -webkit-transform: rotate(360deg);
             }
         }
-
-        @keyframes rotate {
-            0% {
-                -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-            }
-            100% {
-                -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-            }
+        .loading {
+            position: relative;  z-index:20;width: 100%; height: 100%; overflow:visible;background: url('img/squares.gif') no-repeat center center black;
         }
-
     </style>
-    <div class="view">
-        <div class="plane main">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<div class="loading"></div>
+<body>
+
+<section id="starw">
+
+    <div class="starwars-demo">
+        <img src="img/matriximg.png" alt="Star Wars Font" class="star">
+
+        <h1 class="byline" id="byline" style="font-family:starwars;">2016-17</h1>
+
+        <br><br><br>
+
+        <img src="img/thefest.png" alt="Star Wars Font" class="wars">
     </div>
 
-</header>
-<section id="aboutus" class="block type-9" style="height: auto">
-
-    <div class="container">
-        <div class="countdown">
-            <h3 class="title wow fadeInLeft" style="font-family:starwars;">Matrix Commences in:</h3><br>
-
-            <div id="countdown" style="padding:20px; position:relative; margin: auto;line-height: 1;  color: #ffde00; font-size: 2.5vw; font-family:starwars;" >
-
-                <div>
-                    <span class="days"></span>
-                    <div class="smalltext">Days</div>
-                </div>
-                <div>
-                    <span class="hours"></span>
-                    <div class="smalltext">Hours</div>
-                </div>
-                <div>
-                    <span class="minutes"></span>
-                    <div class="smalltext">Minutes</div>
-                </div>
-                <div>
-                    <span class="seconds"></span>
-                    <div class="smalltext">Seconds</div>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
-<section class="bg-primary" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center" >
-               <p style="font-family:starwars;color:white;font-size:17px">MATRIX is the Technical Festival of Sardar Patel Institute of Technology. Its aim is to provide a platform to learn, develop & showcase scientific, thinking skills and reach new levels of innovation.
-It Attracts students from all engineering and junior colleges from Mumbai University, Pune University and other neighbouring cities.</p>
-            </div>
+<section class="section">
+    <div id="countdown" style="font-family:starwars;">
+        <div>
+            <span class="days" style="font-size:25px;"></span>
+            <div class="smalltext">Days</div>
         </div>
-    </div>
-</section>
-
-<section  class="bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading" style="font-family:starwars;">MATRIX AT A GLANCE!</h2>
-                <hr class="primary">
-            </div>
+        <div>
+            <span class="hours" style="font-size:25px;"></span>
+            <div class="smalltext">Hours</div>
         </div>
-    </div>
-    
-</section>
-<!--
-<section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
-            <div class="col-lg-4 col-sm-6">
-                <a href="../img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                    <img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="../img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                    <img src="../img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="../img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                    <img src="../img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="../img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                    <img src="../img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="../img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                    <img src="../img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="../img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                    <img src="../img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div>
+            <span class="minutes" style="font-size:25px;"></span>
+            <div class="smalltext">Minutes</div>
         </div>
-    </div>
-</section>
--->
-
-<section class="bg-primary" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center" style="font-family:starwars;">
-                <h2 class="section-heading" style="font-family:starwars;">SPONSORS</h2>
-                <hr class="light">
-                <div class="col-lg-8 col-lg-offset-2 text-center"><h4 style="font-family:starwars;">Title Sponsor</h4></div><br>
-                <div class="row">
-                <div class="col-sm-6">
-                <img src="../img/sponsors/domino's.jpg" class="img-rounded" style="height:100px;width:150px;"></div><div class="col-sm-6"><img src="../img/sponsors/F&H.jpg" class="img-rounded" style="height:100px;width:150px;"></div></div><br>
-                <div class="col-lg-8 col-lg-offset-2 text-center"><h4 style="font-family:starwars;">Media Sponsor</h4></div><br>    
-                <div class="row">
-                <div class="col-sm-6"><img src="../img/sponsors/Spykar.jpg" class="img-rounded" style="height:100px;width:150px;"></div><div class="col-sm-6"><img src="../img/sponsors/Save_PM.jpg" class="img-rounded" style="height:100px;width:150px;"></div></div><br>
-                <div class="col-lg-8 col-lg-offset-2 text-center"><h4 style="font-family:starwars;">Co-powered by</h4></div><br>
-                <div class="row">
-                <div class="col-sm-6"><img src="../img/sponsors/Tastilo.jpg" class="img-rounded" style="height:100px;width:150px;"></div><div class="col-sm-6"><img src="../img/sponsors/Toshiba.jpg" class="img-rounded" style="height:100px;width:150px;"></div></div><br><div class="row">
-               <div class="col-sm-6"> <img src="../img/sponsors/Nescafe.jpg" class="img-rounded" style="height:100px;width:150px;"></div><div class="col-sm-6"><img src="../img/sponsors/Toshiba.jpg" class="img-rounded" style="height:100px;width:150px;"></div></div>
+        <div>
+            <span class="seconds" style="font-size:25px;"></span>
+            <div class="smalltext">Seconds</div>
+        </div>
+        <br>
+        <div>
+        <a href="Home/index.html" class="btn"><img src="img/ufo.png"></a>
             </div>
 
-        </div>
     </div>
+
 </section>
-<footer class="bg-dark">
-    <div class="container text-center">
-                  <div class="text-center center-block">
-                    <br>
-                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-                <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+<img id="comet" style="transform: translate(140%, 1000%) rotate(40deg);" src="img/comet1.png">
+<img id="planet1" src="img/sideplanet1.png">
 </div>
+<script type="text/javascript" src="js/countdown.js"></script>
+<script type="text/javascript" src="js/starwars.js"></script>
+<script type="text/javascript" src="js/loading.js"></script>
+<script type="text/javascript" src="js/sample.js"></script>
 
-        <div class="call-to-action">
-            <p class="text-muted " style="font-family:starwars;">
-                Copyright &copy; 2016
-                <br>
-                <a href="http://spit.ac.in" >Sardar Patel Institute Of Technology</a>
-                <br>
-            </p>
-        </div>
-    </div>
-</footer>
-
-
-
-
-</div>
 </body>
-
-
-<!-- jQuery -->
-<script src="../vendor/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
-<script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="../js/creative.min.js"></script>
-<script src="../js/loading.js"></script>
-<script src="../js/starwars.js"></script>
-
-<script src="../js/countdown.js"></script>
-
-
-
 </html>
