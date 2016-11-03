@@ -17,7 +17,7 @@
 /* Keyframes */
 @keyframes star {
     0% {
-        opacity: 0;
+        opacity: 1;
         transform: scale(1.5) translateY(-0.75em);
     }
     20% {
