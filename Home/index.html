@@ -37,17 +37,29 @@
 
 
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color: black; color: white;">
-    <div class="container" class="mydiv">
-        <!-- Brand and toggle get grouped for better mobile display -->
+    <!--<div class="container-fluid" class="mydiv">
+        <!-- Brand and toggle get grouped for better mobile display 
         <div class="navbar-header page-scroll">
              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-</button>
+            </button>
             <a  href="#page-top"><img src="../img/Matrix_Logo_White.png" style="padding-top:10px; padding-bottom:10px; width:100px; height:100px;"/></a>
-        </div>
+        </div>-->
+        <div class="container-fluid">
+            <!-- Name and toggle get grouped for better mobile display -->
+            <div class="navbar-header container">
+                <button type="button" class="navbar-toggle collapsed text-center" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#"><img src="../img/Matrix_Logo_White.png" style="padding-top:10px; padding-bottom:10px; width:100px; height:100px;"/></a>
+            </div>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right" style="padding-top:15px; color: white;">
@@ -61,10 +73,13 @@
                     <a href="#event" class="page-scroll smoothScroll" ><i class="fa fa-bookmark" aria-hidden="true"style="padding:5px;"></i>Events</a>
                 </li>
                 <li>
-                    <a href="#team" class="page-scroll smoothScroll" ><i class="fa fa-users"style="padding:5px;" ></i>Team</a>
+                    <a href="#team" class="page-scroll smoothScroll" ><i class="fa fa-users" style="padding:5px;" ></i>Team</a>
                 </li>
                 <li>
-                    <a href="#contact" class="page-scroll smoothScroll" ><i class="fa fa-phone"style="padding:5px;"></i>Contact</a>
+                    <a href="#contact" class="page-scroll smoothScroll" ><i class="fa fa-phone" style="padding:5px;"></i>Contact</a>
+                </li>
+                <li>
+                    <a href="../Contact/" class="page-scroll smoothScroll" ><i class="fa fa-users" style="padding:5px;"></i>Fest Core</a>
                 </li>
             </ul>
         </div>
@@ -473,9 +488,9 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../js2/bootstrap.min.js"></script>
+<script src="../js/bootstrap.js"></script>
 <script src="../js2/jquery.countdown.js"></script>
-<script src="../js2/smoothscroll.js"></script>
+<script src="../js/smoothscroll.js"></script>
 <script type="text/javascript">
     $(function() {
         $('a[href*=#]:not([href=#])').click(function() {
